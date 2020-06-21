@@ -11,9 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b08b8ba7-1631-44d0-b870-eb0fe6e2ec95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loadings.py" beforeDir="false" afterPath="$PROJECT_DIR$/loadings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/Castlevania_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/png/Castlevania_logo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/game.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/png" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\generic_pc\Desktop\Castlevania\png" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -121,22 +128,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592521694457" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1592568054962">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1592671727211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592568054962" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1592568054962">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1592671727211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592568054962" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1592568054961">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1592671727211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592568054961" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1592568054962">
+    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1592671727211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592568054962" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
     <state width="1899" height="340" key="GridCell.Tab.1.bottom" timestamp="1592535087824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -153,5 +160,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592535087824" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1592668830598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592668830598" />
   </component>
 </project>
