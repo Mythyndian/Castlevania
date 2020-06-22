@@ -4,11 +4,10 @@ pygame.init()
 
 
 class Platform(pygame.sprite.Sprite):
-    def __init__(self, x, y, width, height, img):
-        super().__init__(self)
+    def __init__(self, x, y, width, height, img=None):
+        super().__init__()
+        self.rect = pygame.Rect(x, y, width, height)
         self.image = img
-        self.image.convert_alpha()
-        self.image.set_colorkey(ALPHA)
-        self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        if img is not None:
+            self.image.convert_alpha()
+            self.rect = self.image.get_rect()

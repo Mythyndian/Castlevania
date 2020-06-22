@@ -14,7 +14,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loadings.py" beforeDir="false" afterPath="$PROJECT_DIR$/loadings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/png/Castlevania_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/png/Castlevania_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform.py" beforeDir="false" afterPath="$PROJECT_DIR$/platform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/Player/WALK_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/Player/WALK_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/png/Player/WALK_2.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Start" type="PythonConfigurationType" factoryName="Python">
       <module name="Castlevania" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +76,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="game" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Castlevania" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,30 +124,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592521712690">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592748734742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592521712690" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592748734742" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592521694457">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592521694457" />
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1592671727211">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom" timestamp="1592845513595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
-    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1592671727211">
+    <state width="1899" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592845513595" />
+    <state width="1899" height="275" key="GridCell.Tab.0.center" timestamp="1592845513595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
-    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1592671727211">
+    <state width="1899" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592845513595" />
+    <state width="1899" height="275" key="GridCell.Tab.0.left" timestamp="1592845513595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
-    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1592671727211">
+    <state width="1899" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592845513595" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right" timestamp="1592845513595">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592671727211" />
+    <state width="1899" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592845513595" />
     <state width="1899" height="340" key="GridCell.Tab.1.bottom" timestamp="1592535087824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
