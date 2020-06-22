@@ -21,6 +21,11 @@ blink_surfaces = cycle([on_text_surface, off_text_surface])
 blink_surface = next(blink_surfaces)
 pygame.time.set_timer(BLINK_EVENT, 1000)
 # ---------------------------------------------------------------------------------
+player = Player()
+player.rect.x = 0
+player.rect.y = 120
+player_list = pygame.sprite.Group()
+player_list.add(player)
 while run:
     # INTRO
     # ---------------------------------------------------------------------------------
@@ -47,19 +52,16 @@ while run:
     # Creating objects
     # ---------------------------------------------------------------------------------
     # platform_1 = Platform(0, 120, 50, 20)
-    player = Player()
-    player.rect.x = 0
-    player.rect.y = 120
-    player_list = pygame.sprite.Group()
-    player_list.add(player)
-    # ---------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             raise SystemExit
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 raise SystemExit
-            player.get_event(event)
+        player.get_event(event)
+    player.update()
     player_list.draw(SCREEN)
     pygame.display.update()
     CLOCK.tick(60)
