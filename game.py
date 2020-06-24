@@ -2,7 +2,8 @@ import pygame
 from loadings import (FONT, BACKGROUND, L1_1)
 from itertools import cycle
 from player import Player
-from platform import Platform
+
+# from platform import Platform
 
 pygame.init()
 BLINK_EVENT = pygame.USEREVENT + 0
@@ -21,9 +22,7 @@ blink_surfaces = cycle([on_text_surface, off_text_surface])
 blink_surface = next(blink_surfaces)
 pygame.time.set_timer(BLINK_EVENT, 1000)
 # ---------------------------------------------------------------------------------
-player = Player()
-player.rect.x = 0
-player.rect.y = 120
+player = Player(100, 120, 32, 61)
 player_list = pygame.sprite.Group()
 player_list.add(player)
 while run:
@@ -53,7 +52,7 @@ while run:
     # ---------------------------------------------------------------------------------
     # platform_1 = Platform(0, 120, 50, 20)
 
-# ---------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             raise SystemExit
@@ -61,8 +60,9 @@ while run:
             if event.key == pygame.K_ESCAPE:
                 raise SystemExit
         player.get_event(event)
+
     player.update()
-    player_list.draw(SCREEN)
+    player.draw(SCREEN)
     pygame.display.update()
-    CLOCK.tick(60)
+    CLOCK.tick(30)
 pygame.quit()
