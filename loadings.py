@@ -17,5 +17,8 @@ WALK_R_1 = pygame.image.load(os.path.join('png', 'Player', 'WALK_R_1.png')).conv
 WALK_R_2 = pygame.image.load(os.path.join('png', 'Player', 'WALK_R_2.png')).convert_alpha(BACKGROUND)
 WALK_R_3 = pygame.image.load(os.path.join('png', 'Player', 'WALK_R_3.png')).convert_alpha(BACKGROUND)
 
+CROUCH_R = pygame.image.load(os.path.join('png', 'Player', 'CROUCH_R.png')).convert_alpha(BACKGROUND)
+CROUCH_L = pygame.image.load(os.path.join('png', 'Player', 'CROUCH_L.png')).convert_alpha(BACKGROUND)
+
 WALK_L = [WALK_L_1, WALK_L_2, WALK_L_3]
 WALK_R = [WALK_R_1, WALK_R_2, WALK_R_3]

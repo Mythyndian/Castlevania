@@ -2,7 +2,7 @@ import pygame
 from loadings import (FONT, BACKGROUND, L1_1)
 from itertools import cycle
 from player import Player
-
+from level import Level1
 # from platform import Platform
 
 pygame.init()
@@ -22,9 +22,9 @@ blink_surfaces = cycle([on_text_surface, off_text_surface])
 blink_surface = next(blink_surfaces)
 pygame.time.set_timer(BLINK_EVENT, 1000)
 # ---------------------------------------------------------------------------------
-player = Player(100, 120, 32, 61)
-player_list = pygame.sprite.Group()
-player_list.add(player)
+player = Player(0, 500, 32, 61)
+current_level = Level1(player)
+player.level = current_level
 while run:
     # INTRO
     # ---------------------------------------------------------------------------------
