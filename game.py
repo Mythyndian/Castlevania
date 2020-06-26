@@ -1,8 +1,10 @@
 import pygame
-from loadings import (FONT, BACKGROUND, L1_1)
+from loadings import (FONT, BACKGROUND, L1_1, GHOUL_WALK_R, GHOUL_WALK_L, ENEMY_DEATH)
 from itertools import cycle
 from player import Player
 from level import Level1
+
+from platform import Platform
 # from platform import Platform
 
 pygame.init()
@@ -61,7 +63,9 @@ while run:
                 raise SystemExit
         player.get_event(event)
 
+    current_level.update()
     player.update()
+    current_level.draw(SCREEN)
     player.draw(SCREEN)
     pygame.display.update()
     CLOCK.tick(30)

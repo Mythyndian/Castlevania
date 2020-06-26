@@ -22,3 +22,20 @@ CROUCH_L = pygame.image.load(os.path.join('png', 'Player', 'CROUCH_L.png')).conv
 
 WALK_L = [WALK_L_1, WALK_L_2, WALK_L_3]
 WALK_R = [WALK_R_1, WALK_R_2, WALK_R_3]
+
+# ENEMIES ASSETS
+
+GHOUL_WALK_L1 = pygame.image.load(os.path.join('png', 'Enemies', 'Ghoul_L1.png')).convert_alpha(BACKGROUND)
+GHOUL_WALK_L2 = pygame.image.load(os.path.join('png', 'Enemies', 'Ghoul_L2.png')).convert_alpha(BACKGROUND)
+
+GHOUL_WALK_R1 = pygame.image.load(os.path.join('png', 'Enemies', 'Ghoul_R1.png')).convert_alpha(BACKGROUND)
+GHOUL_WALK_R2 = pygame.image.load(os.path.join('png', 'Enemies', 'Ghoul_R2.png')).convert_alpha(BACKGROUND)
+
+GHOUL_WALK_L = [GHOUL_WALK_L1, GHOUL_WALK_L2]
+GHOUL_WALK_R = [GHOUL_WALK_R1, GHOUL_WALK_R2]
+
+ENEMY_DEATH_1 = pygame.image.load(os.path.join('png', 'Enemies', 'DEATH_1.png')).convert_alpha(BACKGROUND)
+ENEMY_DEATH_2 = pygame.image.load(os.path.join('png', 'Enemies', 'DEATH_2.png')).convert_alpha(BACKGROUND)
+ENEMY_DEATH_3 = pygame.image.load(os.path.join('png', 'Enemies', 'DEATH_3.png')).convert_alpha(BACKGROUND)
+
+ENEMY_DEATH = [ENEMY_DEATH_1, ENEMY_DEATH_2, ENEMY_DEATH_3]
