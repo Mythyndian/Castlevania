@@ -21,6 +21,7 @@ class Player(pygame.sprite.Sprite):
         self.direction_of_movement = 'right'
         self.rect.x = x
         self.rect.y = y
+
     def turn_right(self):
         if self.direction_of_movement == 'left':
             self.direction_of_movement = 'right'
@@ -118,7 +119,7 @@ class Player(pygame.sprite.Sprite):
         if self.movement_y == 0:
             self.movement_y = 2
         else:
-            self.movement_y += 0.35
+            self.movement_y += 0.9
 
     def jump(self):
         self.rect.y += 2
