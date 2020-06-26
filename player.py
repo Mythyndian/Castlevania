@@ -2,7 +2,7 @@ import pygame
 import sys
 import os
 from itertools import cycle
-from loadings import CROUCH_R, CROUCH_L, WALK_L, WALK_R, BACKGROUND
+from loadings import ATTACK_L, ATTACK_R, CROUCH_R, CROUCH_L, WALK_L, WALK_R, BACKGROUND
 
 pygame.init()
 
@@ -21,6 +21,7 @@ class Player(pygame.sprite.Sprite):
         self.direction_of_movement = 'right'
         self.rect.x = x
         self.rect.y = y
+        self.strike = False
 
     def turn_right(self):
         if self.direction_of_movement == 'left':
@@ -34,6 +35,7 @@ class Player(pygame.sprite.Sprite):
 
     def stop(self):
         self.movement_x = 0
+
 
     def update(self):
         self._gravitation()
@@ -56,7 +58,6 @@ class Player(pygame.sprite.Sprite):
             self._move(WALK_L)
 
         self.rect.y += self.movement_y
-
         colliding_platforms = pygame.sprite.spritecollide(
             self, self.level.set_of_platforms, False)
 
@@ -82,6 +83,11 @@ class Player(pygame.sprite.Sprite):
                 self.image = CROUCH_L
             else:
                 self.image = CROUCH_R
+        elif self.direction_of_movement == 'right' and self.strike:
+            self._attack(ATTACK_R)
+        elif self.direction_of_movement == 'left' and self.strike:
+            self._attack(ATTACK_L)
+
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)
@@ -94,6 +100,9 @@ class Player(pygame.sprite.Sprite):
                 self.turn_left()
             if event.key == pygame.K_w:
                 self.jump()
+            if event.key == pygame.K_f:
+                self.stop()
+                self.strike = True
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_d and self.movement_x > 0:
                 self.stop()
@@ -120,6 +129,19 @@ class Player(pygame.sprite.Sprite):
             self.movement_y = 2
         else:
             self.movement_y += 0.9
+
+    def _attack(self, image_list):
+        if self._count < 4:
+            self.image = image_list[0]
+        elif self._count < 8:
+            self.image = image_list[1]
+        elif self._count < 12:
+            self.image = image_list[2]
+        if self._count >= 12:
+            self._count = 0
+            self.strike = False
+        else:
+            self._count += 1
 
     def jump(self):
         self.rect.y += 2
