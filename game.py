@@ -2,7 +2,9 @@ import pygame
 from loadings import (FONT, BACKGROUND, L1_1)
 from itertools import cycle
 from player import Player
-from platform import Platform
+from level import Level1
+from enemies import enemy
+# from platform import Platform
 
 pygame.init()
 BLINK_EVENT = pygame.USEREVENT + 0
@@ -21,11 +23,11 @@ blink_surfaces = cycle([on_text_surface, off_text_surface])
 blink_surface = next(blink_surfaces)
 pygame.time.set_timer(BLINK_EVENT, 1000)
 # ---------------------------------------------------------------------------------
-player = Player()
-player.rect.x = 0
-player.rect.y = 120
-player_list = pygame.sprite.Group()
-player_list.add(player)
+player = Player(0, 500, 32, 61)
+ghoul = enemy(60,410,64,64,1100)
+current_level = Level1(player)
+player.level = current_level
+#player.rect.center = SCREEN.get_rect().center
 while run:
     # INTRO
     # ---------------------------------------------------------------------------------
@@ -53,7 +55,7 @@ while run:
     # ---------------------------------------------------------------------------------
     # platform_1 = Platform(0, 120, 50, 20)
 
-# ---------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             raise SystemExit
@@ -61,8 +63,12 @@ while run:
             if event.key == pygame.K_ESCAPE:
                 raise SystemExit
         player.get_event(event)
+
+    #current_level.update()
     player.update()
-    player_list.draw(SCREEN)
+    ghoul.draw(SCREEN)
+    player.draw(SCREEN)
+    #current_level.draw(SCREEN)
     pygame.display.update()
-    CLOCK.tick(60)
+    CLOCK.tick(30)
 pygame.quit()
