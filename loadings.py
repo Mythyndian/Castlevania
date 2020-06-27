@@ -1,6 +1,7 @@
 import pygame
 import os
 import sys
+
 pygame.init()
 SCREEN = pygame.display.set_mode((1109, 600))
 BACKGROUND = pygame.image.load('png/Castlevania_logo.png')

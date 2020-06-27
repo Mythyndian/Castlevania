@@ -17,6 +17,7 @@ class Player(pygame.sprite.Sprite):
         self.movement_x = 0
         self.movement_y = 0
         self._count = 0
+        self._attack_count = 0
         self.level = None
         self.direction_of_movement = 'right'
         self.rect.x = x
@@ -35,7 +36,6 @@ class Player(pygame.sprite.Sprite):
 
     def stop(self):
         self.movement_x = 0
-
 
     def update(self):
         self._gravitation()
@@ -88,7 +88,6 @@ class Player(pygame.sprite.Sprite):
         elif self.direction_of_movement == 'left' and self.strike:
             self._attack(ATTACK_L)
 
-
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
@@ -131,17 +130,17 @@ class Player(pygame.sprite.Sprite):
             self.movement_y += 0.9
 
     def _attack(self, image_list):
-        if self._count < 4:
+        if self._attack_count < 4:
             self.image = image_list[0]
-        elif self._count < 8:
+        elif self._attack_count < 8:
             self.image = image_list[1]
-        elif self._count < 12:
+        elif self._attack_count < 12:
             self.image = image_list[2]
-        if self._count >= 12:
-            self._count = 0
+        if self._attack_count >= 12:
+            self._attack_count = 0
             self.strike = False
         else:
-            self._count += 1
+            self._attack_count += 1
 
     def jump(self):
         self.rect.y += 2
