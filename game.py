@@ -5,12 +5,14 @@ from player import Player
 from level import Level1
 
 from platform import Platform
+
 # from platform import Platform
 
 pygame.init()
 BLINK_EVENT = pygame.USEREVENT + 0
 WIDTH, HEIGHT = 1109, 600
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+SCREEN.set_colorkey((0, 0, 0))
 CLOCK = pygame.time.Clock()
 run = True
 intro = True

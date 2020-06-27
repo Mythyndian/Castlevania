@@ -27,7 +27,7 @@ class Level:
 class Level1(Level):
     def __init__(self, player=None):
         super().__init__(player)
-        self.crete_platforms()
+        #self.crete_platforms()
         self.create_ghouls()
 
     def crete_platforms(self):
