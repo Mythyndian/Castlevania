@@ -1,6 +1,7 @@
 import pygame
 import os
 import sys
+
 pygame.init()
 SCREEN = pygame.display.set_mode((1109, 600))
 BACKGROUND = pygame.image.load('png/Castlevania_logo.png')
@@ -20,9 +21,19 @@ WALK_R_3 = pygame.image.load(os.path.join('png', 'Player', 'WALK_R_3.png')).conv
 CROUCH_R = pygame.image.load(os.path.join('png', 'Player', 'CROUCH_R.png')).convert_alpha(BACKGROUND)
 CROUCH_L = pygame.image.load(os.path.join('png', 'Player', 'CROUCH_L.png')).convert_alpha(BACKGROUND)
 
+ATTACK_R_1 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_R_1.png')).convert_alpha(BACKGROUND)
+ATTACK_R_2 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_R_2.png')).convert_alpha(BACKGROUND)
+ATTACK_R_3 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_R_3.png')).convert_alpha(BACKGROUND)
+
+ATTACK_L_1 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_L_1.png')).convert_alpha(BACKGROUND)
+ATTACK_L_2 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_L_2.png')).convert_alpha(BACKGROUND)
+ATTACK_L_3 = pygame.image.load(os.path.join('png', 'Player', 'ATTACK_L_3.png')).convert_alpha(BACKGROUND)
+
 WALK_L = [WALK_L_1, WALK_L_2, WALK_L_3]
 WALK_R = [WALK_R_1, WALK_R_2, WALK_R_3]
 
+ATTACK_R = [ATTACK_R_1, ATTACK_R_2, ATTACK_R_3]
+ATTACK_L = [ATTACK_L_1, ATTACK_L_2, ATTACK_L_3]
 # ENEMIES ASSETS
 
 GHOUL_WALK_L1 = pygame.image.load(os.path.join('png', 'Enemies', 'Ghoul_L1.png')).convert_alpha(BACKGROUND)
@@ -48,7 +59,17 @@ BAT_WALK_R1 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R1.png')).co
 BAT_WALK_R2 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R2.png')).convert_alpha(BACKGROUND)
 BAT_WALK_R3 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R3.png')).convert_alpha(BACKGROUND)
 
-BAT_WALK_L = [BAT_WALK_L1, BAT_WALK_L2, BAT_WALK_L3]
-BAT_WALK_R = [BAT_WALK_R1, BAT_WALK_R2, BAT_WALK_R3]
+BAT_WALK_L = [BAT_WALK_L1,BAT_WALK_L2,BAT_WALK_L3]
+BAT_WALK_R = [BAT_WALK_R1,BAT_WALK_R2,BAT_WALK_R3]
 
-BAT_SLEEP = pygame.image.load(os.path.join('png','Enemies','BAT_SLEEP.png')).convert_alpha(BACKGROUND)
+BAT_SLEEP = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_SLEEP.png')).convert_alpha(BACKGROUND)
+
+#ITEMS ASSETS
+
+BIG_HEART = pygame.image.load(os.path.join('png','Items','Big_Heart.png')).convert_alpha(BACKGROUND)
+SMALL_HEART = pygame.image.load(os.path.join('png','Items','Small_Heart.png')).convert_alpha(BACKGROUND)
+
+CANDLE_01 = pygame.image.load(os.path.join('png','Items','Candle_01.png')).convert_alpha(BACKGROUND)
+CANDLE_02 = pygame.image.load(os.path.join('png','Items','Candle_02.png')).convert_alpha(BACKGROUND)
+
+CANDLE = [CANDLE_01,CANDLE_02]

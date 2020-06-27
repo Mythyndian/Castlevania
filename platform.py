@@ -10,6 +10,7 @@ class Platform(pygame.sprite.Sprite):
         self.height = height
         self.image = pygame.Surface([self.width, self.height])
         self.rect = self.image.get_rect()
+        self.image.set_colorkey((0, 0, 0))
         self.rect.x = rect_x
         self.rect.y = rect_y
 

@@ -1,15 +1,18 @@
 import pygame
-from loadings import (FONT, BACKGROUND, L1_1)
+from loadings import (FONT, BACKGROUND, L1_1, GHOUL_WALK_R, GHOUL_WALK_L, ENEMY_DEATH)
 from itertools import cycle
 from player import Player
 from level import Level1
-from enemies import enemy
+
+from platform import Platform
+
 # from platform import Platform
 
 pygame.init()
 BLINK_EVENT = pygame.USEREVENT + 0
 WIDTH, HEIGHT = 1109, 600
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+SCREEN.set_colorkey((0, 0, 0))
 CLOCK = pygame.time.Clock()
 run = True
 intro = True
@@ -24,10 +27,8 @@ blink_surface = next(blink_surfaces)
 pygame.time.set_timer(BLINK_EVENT, 1000)
 # ---------------------------------------------------------------------------------
 player = Player(0, 500, 32, 61)
-ghoul = enemy(60,410,64,64,1100)
 current_level = Level1(player)
 player.level = current_level
-#player.rect.center = SCREEN.get_rect().center
 while run:
     # INTRO
     # ---------------------------------------------------------------------------------
@@ -64,11 +65,10 @@ while run:
                 raise SystemExit
         player.get_event(event)
 
-    #current_level.update()
+    current_level.update()
     player.update()
-    ghoul.draw(SCREEN)
+    current_level.draw(SCREEN)
     player.draw(SCREEN)
-    #current_level.draw(SCREEN)
     pygame.display.update()
     CLOCK.tick(30)
 pygame.quit()

@@ -80,13 +80,9 @@ class Ghoul(Enemy):
                 or self.rect.left < self.platform.rect.left):
             self.movement_x *= -1
 
-
 class Bat(Enemy):
-    def __init__(self, start_image, image_list_right,
-                 image_list_left, image_list_dead,
-                 movement_x = 0, movement_y = 0, boundary_right = 0, boundary_left = 0,
-                 boundary_top = 0, boundary_bottom = 0):
-        super().__init__(start_image, image_list_right,image_list_left, image_list_dead,movement_x, movement_y)
+    def __init__(self,start_image,image_list_right,image_list_left,image_list_dead,movement_x,movement_y,boundary_right = 0, boundary_left = 0, boundary_top = 0, boundary_bottom = 0):
+        super().__init__(start_image,image_list_right,image_list_left,image_list_dead,movement_x,movement_y)
 
         self.boundary_right = boundary_right
         self.boundary_left = boundary_left
@@ -99,13 +95,12 @@ class Bat(Enemy):
         if self.sleep:
             if self.rect.left - self.level.player.rect.right < 300:
                 self.sleep = False
+
         else:
             super().update()
-            self.rect.y += self.movement_y
+            self.rect.y = self.movement_y.y
             position = self.rect.x
-            if (position < self.boundary_left or
-                    position + self.rect.width > self.boundary_right):
+            if (position  < self.boundary_left or position + self.rect.width > self.boundary_right):
                 self.movement_x *= -1
-            if (self.rect.top < self.boundary_top or
-                    self.rect.bottom > self.boundary_bottom):
-                self.movement_y *= -1
+            if (self.rect.top < self.boundary_top or self.rect.bottom > self.boundary_bottom):
+                self.movement_y *=-1
