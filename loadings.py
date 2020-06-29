@@ -50,3 +50,26 @@ ENEMY_DEATH_2 = pygame.image.load(os.path.join('png', 'Enemies', 'DEATH_2.png'))
 ENEMY_DEATH_3 = pygame.image.load(os.path.join('png', 'Enemies', 'DEATH_3.png')).convert_alpha(BACKGROUND)
 
 ENEMY_DEATH = [ENEMY_DEATH_1, ENEMY_DEATH_2, ENEMY_DEATH_3]
+
+BAT_WALK_L1 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_L1.png')).convert_alpha(BACKGROUND)
+BAT_WALK_L2 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_L2.png')).convert_alpha(BACKGROUND)
+BAT_WALK_L3 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_L3.png')).convert_alpha(BACKGROUND)
+
+BAT_WALK_R1 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R1.png')).convert_alpha(BACKGROUND)
+BAT_WALK_R2 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R2.png')).convert_alpha(BACKGROUND)
+BAT_WALK_R3 = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_R3.png')).convert_alpha(BACKGROUND)
+
+BAT_WALK_L = [BAT_WALK_L1,BAT_WALK_L2,BAT_WALK_L3]
+BAT_WALK_R = [BAT_WALK_R1,BAT_WALK_R2,BAT_WALK_R3]
+
+BAT_SLEEP = pygame.image.load(os.path.join('png', 'Enemies', 'Bat_SLEEP.png')).convert_alpha(BACKGROUND)
+
+#ITEMS ASSETS
+
+BIG_HEART = pygame.image.load(os.path.join('png','Items','Big_Heart.png')).convert_alpha(BACKGROUND)
+SMALL_HEART = pygame.image.load(os.path.join('png','Items','Small_Heart.png')).convert_alpha(BACKGROUND)
+
+CANDLE_01 = pygame.image.load(os.path.join('png','Items','Candle_01.png')).convert_alpha(BACKGROUND)
+CANDLE_02 = pygame.image.load(os.path.join('png','Items','Candle_02.png')).convert_alpha(BACKGROUND)
+
+CANDLE = [CANDLE_01,CANDLE_02]

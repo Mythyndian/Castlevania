@@ -12,6 +12,8 @@ class Player(pygame.sprite.Sprite):
         super(Player, self).__init__()
         self.image = WALK_R[0]
         self.rect = self.image.get_rect()
+        self.items = {}
+        self.lifes = 2
         self.jumping = False
         self.walk_count = 0
         self.movement_x = 0
@@ -88,6 +90,14 @@ class Player(pygame.sprite.Sprite):
         elif self.direction_of_movement == 'left' and self.strike:
             self._attack(ATTACK_L)
 
+        colliding_items = pygame.sprite.spritecollide(
+            self, self.level.set_of_items, False)
+        for item in colliding_items:
+
+            if item.name == 'heart':
+                self.lifes +=1
+                item.kill()
+                
     def draw(self, surface):
         surface.blit(self.image, self.rect)
 
