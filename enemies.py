@@ -72,7 +72,7 @@ class Ghoul(Enemy):
         # self.rect.centerx = random.randint(self.rect.left + self.rect.width // 2,
         #                                  self.rect.right - self.rect.width // 2)
         self.rect.x = self.platform.rect.x
-        
+
     def update(self):
         super(Ghoul, self).update()
 
