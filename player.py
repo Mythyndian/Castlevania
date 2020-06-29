@@ -2,7 +2,7 @@ import pygame
 import sys
 import os
 from itertools import cycle
-from loadings import ATTACK_L, ATTACK_R, CROUCH_R, CROUCH_L, WALK_L, WALK_R, BACKGROUND
+from loadings import FONT,ATTACK_L, ATTACK_R, CROUCH_R, CROUCH_L, WALK_L, WALK_R, BACKGROUND,BIG_HEART
 
 pygame.init()
 
@@ -18,13 +18,15 @@ class Player(pygame.sprite.Sprite):
         self.movement_x = 0
         self.movement_y = 0
         self._count = 0
-        self.lifes = 2
+        self.lives = 3
+        self.max_lives = 5
         self._attack_count = 0
         self.level = None
         self.direction_of_movement = 'right'
         self.rect.x = x
         self.rect.y = y
         self.strike = False
+        self.score = 0
 
     def turn_right(self):
         if self.direction_of_movement == 'left':
@@ -95,11 +97,17 @@ class Player(pygame.sprite.Sprite):
         for item in colliding_items:
 
             if item.name == 'heart':
-                self.lifes +=1
+                self.lives +=1
+                self.score +=100
                 item.kill()
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)
+    #display players lives
+        for i in range(self.lives - 1):
+            surface.blit(BIG_HEART, [25 * i + 10, 60])
+        score_text = FONT.render(f"Score: {self.score}",1,(255,255,255))
+        surface.blit(score_text,(10,10))
 
     def get_event(self, event):
         if event.type == pygame.KEYDOWN:

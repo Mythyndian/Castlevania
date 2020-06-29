@@ -64,7 +64,7 @@ while run:
             if event.key == pygame.K_ESCAPE:
                 raise SystemExit
         player.get_event(event)
-
+        
     current_level.update()
     player.update()
     current_level.draw(SCREEN)

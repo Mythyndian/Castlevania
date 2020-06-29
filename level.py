@@ -1,9 +1,10 @@
 import pygame
 from platform import Platform
 import random
-from loadings import (ENEMY_DEATH, GHOUL_WALK_L, GHOUL_WALK_R,BAT_WALK_L,BAT_WALK_R,BAT_SLEEP,BIG_HEART,SMALL_HEART,CANDLE)
+from loadings import (ENEMY_DEATH, GHOUL_WALK_L, GHOUL_WALK_R,BAT_WALK_L,BAT_WALK_R,BAT_SLEEP,BIG_HEART,SMALL_HEART,CANDLE,CANDLE_01)
 from enemies import Ghoul,Bat
 from items import Item
+import player
 
 pygame.init()
 
